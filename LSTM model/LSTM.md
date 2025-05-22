@@ -8,10 +8,11 @@ To build and deploy an **end-to-end machine learning application** that classifi
 ## 💡 Key Goals:
 
 1. **Detect fake news** using deep learning techniques by training on labeled text data.
-2. **Build an interactive UI** using Streamlit so users can input news and get instant feedback.
-3. **Preprocess textual data** effectively (tokenization, padding, etc.) to feed into the LSTM model.
-4. **Save and load models and tokenizers** for efficient reuse during inference.
-5. **Deploy the model** streamlit Cloud.
+2. To evaluate the performance of the previously trained machine learning model on a new dataset. 
+3. **Build an interactive UI** using Streamlit so users can input news and get instant feedback.
+4. **Preprocess textual data** effectively (tokenization, padding, etc.) to feed into the LSTM model.
+5. **Save and load models and tokenizers** for efficient reuse during inference.
+6. **Deploy the model** streamlit Cloud.
 
 ## 🗂️ Data used:
 1. Political fake news
@@ -21,6 +22,7 @@ To build and deploy an **end-to-end machine learning application** that classifi
 ## 📦 What It Demonstrates:
 
 * Text classification using **LSTM (NLP + Deep Learning)**
+* Performance of the machine models.
 * Integration of **TensorFlow/Keras** models with **Streamlit**
 * Application of **text preprocessing techniques** (tokenization)
 * Ability to **deploy machine learning projects**
