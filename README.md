@@ -44,7 +44,7 @@ In today’s digital world, the spread of fake news has become a significant iss
 - While **Linear SVM** scored highest accuracy on the Kaggle dataset, the **LSTM** model demonstrated more reliable performance on both datasets.
 - This suggests the LSTM's strength in capturing deeper text dependencies that traditional models might miss.
 
-## 🌐 Live Apps
+## Apps
 
 - **ML Models Web App**: Streamlit ML App
 - **LSTM Model Web App**: Streamlit LSTM App
