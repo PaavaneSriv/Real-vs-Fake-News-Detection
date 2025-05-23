@@ -1,69 +1,73 @@
 # Real vs Fake News Detection
 
-## 📌 Project Overview
-This project is a machine learning-powered web application that detects whether a news article is real or fake. It aims to support fact-checking efforts and minimize the spread of misinformation by classifying news based on textual content using NLP techniques.
+## Project Overview
+This project is a machine learning-powered web application that detects whether a news article is real or fake. It aims to support fact-checking efforts and minimize the spread of misinformation by classifying news based on textual content using NLP techniques. Implemenetd four ML models and one LSTM-based model, and evaluated their performance on two different datasets.
 
-The web app is built using **Streamlit** and deployed online for public access.
+The web app is built using **Streamlit**.
 
-🔗 **[Click here to open the app](https://your-username-your-app-name.streamlit.app/)**
-
----
-
-## ❓ Problem Statement
+## Problem Statement
 In today’s digital world, the spread of fake news has become a significant issue, particularly on social media platforms. The main challenge lies in distinguishing between legitimate and deceptive news articles. This project addresses the problem by leveraging natural language processing and machine learning to detect fake news automatically.
 
----
+## Objectives
 
-## 🎯 Objectives
-- To build machine learning models that can classify news as real or fake.
-- To process and clean raw text data for effective model performance.
-- To provide an interactive web interface for users to test the classifier.
-- To deploy the solution as a web application using Streamlit.
+- Train and evaluate ML and DL models for fake news classification.
+- Compare their performance across different datasets.
+- Build user-friendly Streamlit apps for real-time testing.
 
----
+## Data Sources
 
-## 🗂️ Data Source
-The dataset used for this project was sourced from **Kaggle**:  
-🔗 [Fake and Real News Dataset on Kaggle](https://www.kaggle.com/datasets/razanaqvi14/real-and-fake-news)
+- **ML Dataset**: [Kaggle - Fake and Real News Dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+- **LSTM Dataset**: Sourced from various internet repositories and cleaned for consistency.
 
-It contains two separate files: `Fake.csv` and `True.csv`, representing fake and real news articles respectively.
+## Methodology
 
----
+### 1. **ML Models**
+- Models used: Naive Bayes, Logistic Regression, Random Forest, Linear SVM.
+- Vectorization: TF-IDF
+- Evaluation: Accuracy, precision, recall, F1-score
+- Best Model: Linear SVM (accuracy: **81.80%**)
 
-## ⚙️ Methodology
-1. **Data Collection**: Downloaded from Kaggle.
-2. **Data Preprocessing**:
-   - Removing stop words and punctuation
-   - Tokenization and text normalization
-3. **Model Building**:
-   - TF-IDF Vectorization
-   - Logistic Regression / Naive Bayes classifier
-4. **Model Evaluation**:
-   - Accuracy, Precision, Recall, F1 Score
-5. **Deployment**:
-   - Built interactive UI using Streamlit
-   - Deployed on Streamlit Cloud for public access
+### 2. **LSTM Model**
+- Embedding layer + LSTM architecture
+- Tokenization and padding applied
+- Evaluated on both datasets
+- Despite accuracy being slightly lower (**~79.86%**), the LSTM showed better generalization and stability across datasets
 
----
-
-## 🧠 Tech Stack
+## Tech Stack
 - Python
 - Pandas, NumPy
 - scikit-learn
 - NLTK
 - Streamlit
 
----
+## Results
+- While **Linear SVM** scored highest accuracy on the Kaggle dataset, the **LSTM** model demonstrated more reliable performance on both datasets.
+- This suggests the LSTM's strength in capturing deeper text dependencies that traditional models might miss.
 
-## 📁 How to Run Locally
+## 🌐 Live Apps
+
+- **ML Models Web App**: Streamlit ML App
+- **LSTM Model Web App**: Streamlit LSTM App
+
+  
+## How to Run Locally
 
 ```bash
-# Clone the repo
+# Clone the repository
 git clone https://github.com/yourusername/Real-vs-Fake-News-Detection.git
 cd Real-vs-Fake-News-Detection
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the app
+# Run ML app
+cd ML models app
 streamlit run app.py
+
+# Run LSTM app
+cd LSTM app
+streamlit run LSTMapp.py
+
+#Compatibility Warning
+#TensorFlow Compatibility Note
+#TensorFlow requires a 64-bit version of Python and is compatible with Python 3.8 to 3.11. Make sure your environment meets these requirements. TensorFlow will not install or run properly on 32-bit systems or unsupported Python versions.
